@@ -1,0 +1,9 @@
+#! /usr/bin/env sh
+cd ./content-script
+yarn
+yarn build
+cd ..
+cd ./inject-script
+yarn
+yarn build
+cd ..
