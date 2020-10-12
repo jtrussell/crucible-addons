@@ -7,7 +7,7 @@ const consumeEvent = (event, user) => {
       && event.message.alert.message[0]
       && event.message.alert.message[0].name === user
       && event.message.alert.message[1]
-      && / has won the game/.test(event.message.alert.message[1])
+      && /won the game/.test(event.message.alert.message[1])
   ) {
     showConfetti();
     setTimeout(showConfetti, 200);

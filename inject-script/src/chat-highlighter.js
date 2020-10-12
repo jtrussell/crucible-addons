@@ -1,18 +1,26 @@
 let elementAt = 0;
 
-const cardsToHighlight = [
-  'The Evil Eye',
-  'Shadow of Dis',
+const playHighlight = [
   'Scrambler Storm',
+  'Stealth Mode',
+  'Foggify',
+  'Fogbank',
+  'Skippy Timehog',
+  'Foggify',
+  'Sow Salt',
+  'Shadow of Dis',
   'Inky Gloom',
   'Into the Night',
   'Miasma',
-  'Stealth Mode',
   'Etan\'s Jar',
   'Mark of Dis',
   'Control the Weak',
-  'Waking Nightmare',
   'Opposition Research',
+];
+
+const useHighlight = [
+  'Lifeward',
+  'Lucky Dice',
 ];
 
 const update = () => {
@@ -21,7 +29,13 @@ const update = () => {
   );
 
   links.slice(elementAt).forEach((el) => {
-    if (/plays/.test(el.parentNode.innerText) && cardsToHighlight.includes(el.innerText)) {
+    if (/plays/.test(el.parentNode.innerText) && playHighlight.includes(el.innerText)) {
+      el.style.backgroundColor = '#fc7f79';
+      el.style.color = '#000';
+      el.style.padding = '2px';
+    }
+
+    if (/uses/.test(el.parentNode.innerText) && useHighlight.includes(el.innerText)) {
       el.style.backgroundColor = '#fc7f79';
       el.style.color = '#000';
       el.style.padding = '2px';

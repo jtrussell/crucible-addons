@@ -191,6 +191,10 @@ setTimeout(() => {
       overflow-y: scroll;
     }
 
+    .player-home-row-container:first-of-type .panel.card-pile.identity {
+      height: 128px;
+    }
+
     .card-large .card-name {
       display: none;
     }
