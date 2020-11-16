@@ -48,7 +48,7 @@ const main = (response) => {
 }
 
 const isInGame = () => {
-  return !!document.querySelector('.player-home-row-container');
+  return window.location.pathname === '/play';
 }
 
 const waitForGameStart = () => {
